@@ -1,0 +1,77 @@
+#%RAML 1.0
+---
+#===============================================================
+#  References:
+#    - RAML Specification - https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md
+#===============================================================
+title: Exchange Rate Specification
+uses: 
+  traits: lib/traits/traits.raml
+version: v1
+baseUri: "client-api/{version}"
+mediaType:  application/json
+protocols: [ HTTP, HTTPS ]
+types:
+  Currencies:
+    type: !include schemas/currencies-get.json
+  ExchangeRates:
+    type: !include schemas/exchange-rates-get.json
+  Fee:
+    type: !include schemas/fee-get.json
+
+#===============================================================
+# API resource definitions
+#===============================================================
+/exchange:
+  /currencies:
+    get:
+      is: [ traits.BadRequestError, traits.InternalServerError ]
+      description: "Returns all available currencies"
+      responses:
+        200:
+          body:
+            application/json:
+              type: Currencies
+              example: !include examples/example-currencies-get.json
+
+  /rates:
+    get:
+      is: [ traits.BadRequestError, traits.InternalServerError ]
+      description: "Returns all available rates"
+      queryParameters:
+        source:
+          description: "The currency we want to convert from"
+          required: true
+          type: string
+          example: "EUR"
+        target:
+          description: "The currency we want to convert to"
+          required: true
+          type: string
+          example: "USD"
+        from:
+          description: "Starting date of this exchange rates"
+          required: false
+          type: date-only
+          example: "2022-02-01"
+        to:
+          description: "Ending date of this exchange rates"
+          required: false
+          type: date-only
+          example: "2022-02-01"
+      responses:
+        200:
+          body:
+            application/json:
+              type: ExchangeRates
+              example: !include examples/example-exchange-rates-get.json
+  /fee:
+    get:
+      is: [ traits.BadRequestError, traits.InternalServerError ]
+      description: "Returns a fee for the exchange rate"
+      responses:
+        200:
+          body:
+            application/json:
+              type: Fee
+              example: !include examples/example-fee-get.json

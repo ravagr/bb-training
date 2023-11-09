@@ -1,0 +1,66 @@
+#%RAML 1.0
+---
+#===============================================================
+#  References:
+#    - RAML Specification - https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md
+#===============================================================
+title: OLB Linking Specification
+uses:
+  traits: lib/traits/traits.raml
+version: v1
+baseUri: "client-api/{version}"
+mediaType:  application/json
+protocols: [ HTTP, HTTPS ]
+types:
+  AccountConsentRequest:
+    type: !include schemas/accountConsentRequest.json
+  AccountConsentResponse:
+    type: !include schemas/accountConsentResponse.json
+  AccountConsentAuthorizationRequest:
+    type: !include schemas/accountConsentAuthorizationRequest.json
+  AccountConsentAuthorizationResponse:
+    type: !include schemas/accountConsentAuthorizationResponse.json
+#===============================================================
+# API resource definitions
+#===============================================================
+/account:
+  /consent:
+    get:
+      description: "Returns all available currencies"
+      responses:
+        200:
+          body:
+            application/json:
+              type: AccountConsentResponse
+              example: !include examples/example-accountConsentResponse.json
+
+    post:
+      description: Create a new Account Consent
+      body:
+        application/json:
+          type: AccountConsentRequest
+      responses:
+        200:
+          body:
+            application/json:
+              type: AccountConsentResponse
+              example: !include examples/example-accountConsentResponse.json
+
+    /{consentID}:
+      /authorization:
+        post:
+          description: Pass OTP recieved for this consentId
+          body:
+            application/json:
+              type: AccountConsentAuthorizationRequest
+              example: !include examples/example-accountConsentAuthorizationRequest.json
+          responses:
+            200:
+              body:
+                application/json:
+                  type: AccountConsentAuthorizationResponse
+                  example: !include examples/example-accountConsentAuthorizationResponse.json
+        get:
+          description: "Returns all available currencies"
+          responses:
+            204:

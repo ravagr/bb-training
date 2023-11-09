@@ -1,0 +1,49 @@
+---
+### Live profile
+spring:
+  profiles: live
+  datasource:
+    driver-class-name: ${spring.datasource.driver-class-name}
+    username: ${spring.datasource.username.contact-manager}
+    password: ${spring.datasource.password.contact-manager}
+    url: ${spring.datasource.url.contact-manager}
+
+
+
+
+
+
+
+backbase:
+  api:
+    extensions: # Contact Extensions Example
+      classes:
+        # Presentation spec
+        com.backbase.presentation.contact.rest.spec.v2.contacts.ContactsPostRequestBody: extra-data
+        com.backbase.presentation.contact.rest.spec.v2.contacts.ContactPutRequestBody: extra-data
+        com.backbase.presentation.contact.rest.spec.v2.contacts.AccountInformation:  extra-data1
+        # Persistence spec
+        com.backbase.dbs.party.persistence.spec.v2.parties.PartyDto: extra-data
+        com.backbase.dbs.party.persistence.spec.v2.parties.AccountInformation: extra-data1
+        # Persistence entities
+        com.backbase.dbs.contactmanager.party.persistence.Party: extra-data
+        com.backbase.dbs.contactmanager.party.persistence.AccountInformation: extra-data1
+      property-sets:
+        extra-data:
+          properties:
+          - property-name: socialProfileLink
+            type: string
+          - property-name: relationship
+            type: string
+          - property-name: jobTitle
+            type: string
+        extra-data1:
+          properties:
+            - property-name: socialProfileLink
+              type: string
+
+  audit:
+    enabled: false
+  security:
+    mtls:
+      enabled: false      

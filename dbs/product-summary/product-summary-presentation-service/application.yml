@@ -1,0 +1,11 @@
+---
+### Live profile
+spring:
+  profiles: live
+
+backbase:
+  security:
+    mtls:
+      enabled: false
+    public:
+      paths: "/**"

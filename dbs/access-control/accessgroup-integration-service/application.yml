@@ -1,0 +1,14 @@
+---
+### Live profile
+spring:
+  profiles: live
+
+backbase:
+  accessgroup:
+    token:
+      key: Bar12345Bar12345
+      initPhrase: RandomInitVecto2
+logging:
+  level:
+    com.backbase: DEBUG
+    org.springframework: DEBUG

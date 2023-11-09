@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: bb-authentication-token-converter-service
+Implementation-Version: 1.2.41
+Build-Jdk-Spec: 1.8
+Created-By: Maven Archiver 3.4.0
+Implementation-Vendor: Backbase B.V.
+

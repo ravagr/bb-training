@@ -1,0 +1,32 @@
+#%RAML 0.8
+---
+title: CXP API Registry
+baseUri: http://{hostname}
+version: v1
+protocols: [ HTTP, HTTPS ]
+
+/health:
+  displayName: Health check
+  description: |
+    Check is API registry available.
+  get:
+    responses:
+      200:
+        headers:
+          X-Application-Context:
+            example: application
+          X-XSS-Protection:
+            example: 1; mode=block
+          X-Content-Type-Options:
+            example: nosniff
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "status": { "enum" : ["UP", "DOWN", "OUT_OF_SERVICE", "UNKNOWN"]}
+              }
+            example: |
+              {
+                "status" : "UP"
+              }

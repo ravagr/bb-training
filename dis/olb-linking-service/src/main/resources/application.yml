@@ -1,0 +1,51 @@
+server:
+  port: 9916
+
+# API Registry client configuration
+eureka:
+  instance:
+    metadata-map:
+      public: true
+      role: live
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/registry/eureka/
+
+# Configure Internal JWT handler
+sso:
+  jwt:
+    internal:
+      signature:
+        key:
+          type: ENV
+          value: SIG_SECRET_KEY
+
+# Spring health monitoring
+management:
+  health:
+    jms:
+      enabled: false
+logging:
+  level:
+    com.backbase: DEBUG
+    org.springframework: DEBUG
+
+
+olb:
+  url:
+    base: https://a1e9e595-e704-44d4-be39-edd3d8fb0516.mock.pstmn.io
+    accountConsent: ${olb.url.base}/account/consent
+    accountConsentAuthorization: ${olb.url.base}/account/consent/{consentID}/authorization
+
+backbase:
+  url:
+    base: http://localhost:8082/arrangement-manager
+    arrangement:  ${backbase.url.base}/integration-api/v2/arrangements
+    baseAccessGroup: http://localhost:8086/accessgroup-integration-service
+    baseAccesscontrol: http://localhost:7777/api/access-control
+    datagroupSearch: ${backbase.url.baseAccessGroup}/v2/accessgroups/data-groups/type/ARRANGEMENTS/search
+    datagroupAddArrangement: ${backbase.url.baseAccessGroup}/v2//batch/data-items
+    dataGroupCreate: ${backbase.url.baseAccessGroup}/v2/accessgroups/data-groups/batch
+    dataGroupUpdate: ${backbase.url.baseAccessGroup}/v2/accessgroups/data-groups/batch/data-items
+    createFunctionGroup: ${backbase.url.baseAccessGroup}/v2/accessgroups/function-groups
+    getUserPrivilege: ${backbase.url.baseAccesscontrol}/client-api/v2/accessgroups/users/by-permissions?serviceAgreementId={{MSA_ID}}&functionName=Product Summary

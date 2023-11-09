@@ -1,0 +1,1923 @@
+{
+	"info": {
+		"_postman_id": "42e7ad37-6076-4958-a745-c64260c73707",
+		"name": "Assignment Client api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21494079"
+	},
+	"item": [
+		{
+			"name": "OLB Linking",
+			"item": [
+				{
+					"name": "login as user retail Copy 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"hi\")",
+									"var responseHeaders1 = pm.response.headers.all();",
+									"console.log(responseHeaders1);",
+									"",
+									"if(pm.response.code === 200) {",
+									"    var token = pm.response.headers.get(\"Set-Cookie\")",
+									"    pm.environment.set('token', token)",
+									"    console.log(\"inside if\"+token);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "retailbnk-mobile-2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/auth/login",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login as user retail Copy 4",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "retailbnk-mobile-2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gatewayUrl}}/api/auth/login",
+									"host": [
+										"{{gatewayUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Xss-Protection",
+									"value": "1 ; mode=block"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "Authorization=eyJraWQiOiJNYmV1VmVVWlhVT2FJcDgwYmx1XC9sanFOQjNKZE9aSDgxQ3JGU0tpMmVcL2M9IiwiY3R5IjoiSldUIiwiZW5jIjoiQTEyOENCQy1IUzI1NiIsImFsZyI6ImRpciJ9..U4ASTANJBEfMdKMxom0hFg.tF0CdV-LYYs5rjnIO9fMkohF0t1pdvidLkXiQ3ae84cZ5SaiCD_f3JlFbfVPzh3Nz14yfSym1N5PuidvtdnRqFYHrLPOBznZxe88GjwkRe9Wciwg_kI30pQMfieGlGHAdCXBARPOTvMW-w0KEagDGNxKyWirYVnRBIHzASpar_qNiOTN7drTLFQEPTU5LqvpU-WJqwXwqBzzGTjtI5xb0VdjU9wjkvWODqdFLWWXYAbYHNRwLyO_s9FXtB4kECWnT0025yTfHKuiHjRxSNn1wVZ2kvkr7fztCxtGIGGxBcd2D5R-K46xmwtPWCgqIs5Qj4PmXF09CKQphCBQC6BgG7xC3p8b1SdM23hg3ia9XWIGZ_vdlDRXOyCmtjDS7TMnBEAJJHN8SvIYi3bDZyy71eyMfPcbIqfGcjnt4gqP2SWYj5Fopsh7lBqd_29skT0Pcq-ME9DmDWlQHw_hBYqaz799GuuJilSZR-z-Dizp3RMFYwNrBhwaSdY9tPfCAXdLn3W0Oy4CCeJmNo7a3aAbjle-Sa06gpNhoHUqWLXSoODy7viTmOJBc7t1NBr4EIvG4dZjGdLRMhg-LXOq-_MezA.CmraPMPXIjB7Bts794ivxw; Max-Age=3600; Expires=Tue, 31-Oct-2023 06:34:58 GMT; Path=/; HttpOnly"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 05:34:58 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "External - Retrieve SA context Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"MSA_ID\", response[0].id);",
+									"console.log(response[0].id);",
+									"",
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/usercontext/serviceagreements",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"usercontext",
+								"serviceagreements"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "External - Retrieve SA context Copy 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer {{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/usercontext/serviceagreements",
+									"host": [
+										"{{gatewayUrl}}"
+									],
+									"path": [
+										"api",
+										"access-control",
+										"client-api",
+										"v2",
+										"accessgroups",
+										"usercontext",
+										"serviceagreements"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Xss-Protection",
+									"value": "1 ; mode=block"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=728062f7-caa0-41b0-80a2-fbb75ebc8615; Path=/"
+								},
+								{
+									"key": "x-total-count",
+									"value": "1"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 05:36:45 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"40289d8f849440fd01849450f0a90001\",\n        \"externalId\": \"Bank_External\",\n        \"name\": \"Bank\",\n        \"description\": \"Master Service Agreement\",\n        \"isMaster\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Set context to first SA Benef Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "_csrf",
+								"value": "{{xsrf-token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serviceAgreementId\": \"{{MSA_ID}}\"\n}"
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/usercontext?_csrf={{xsrf-token}}",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"usercontext"
+							],
+							"query": [
+								{
+									"key": "_csrf",
+									"value": "{{xsrf-token}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Set context to first SA Benef Copy 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "_csrf",
+										"value": "{{xsrf-token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"serviceAgreementId\": \"{{MSA_ID}}\"\n}"
+								},
+								"url": {
+									"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/usercontext?_csrf={{xsrf-token}}",
+									"host": [
+										"{{gatewayUrl}}"
+									],
+									"path": [
+										"api",
+										"access-control",
+										"client-api",
+										"v2",
+										"accessgroups",
+										"usercontext"
+									],
+									"query": [
+										{
+											"key": "_csrf",
+											"value": "{{xsrf-token}}"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Xss-Protection",
+									"value": "1 ; mode=block"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "USER_CONTEXT=eyJraWQiOiJaNXB5dkxcL3FMYUFyR3ZiTkY3Qm11UGVQU1Q4R0I5UHBPR0RvRnBlbmIxOD0iLCJjdHkiOiJKV1QiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..HfrXR68ACiYoJo2Y0lZWhA.V-KIe65GmmfHSAFPQQUCFXxHFnyH6dO5FOfhTVszd4-J_nKmOG0BBNphsiyRfaMlsxb-J1fdgfe_Wp8oZG6tMfuNxHNas6AO04pXFOpTp2TQ7cz3QbLs2meNYnKD6HlLk65cvXRh8XWlRiJ6sSn6auq9L8346FEo6JeAlByXU5cB32RW2e0JnP_deXQQzni-ZbDtn7Y562ibi6aQxZD_C51fxt4P9izMktLKc8ELmWat1s73OQqWzJD5vwrh4pf6Eyj87S0gasfWlqzUAamHW_i5AHq4o6iWLOsVLJgMGgl_ZrFXHEt_Xrth0AuYMmjJ.57IFMaE2Pi4o8ntnY8qhSw; Path=/"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 05:37:17 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Product Summary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/arrangement-manager/client-api/v2/productsummary",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"arrangement-manager",
+								"client-api",
+								"v2",
+								"productsummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Previlege",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"console.log(response);",
+									"postman.setEnvironmentVariable(\"userId\", response[0].get(0));",
+									"console.log(response[0].get(0));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/users/by-permissions?serviceAgreementId={{MSA_ID}}&functionName=Product Summary",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"users",
+								"by-permissions"
+							],
+							"query": [
+								{
+									"key": "serviceAgreementId",
+									"value": "{{MSA_ID}}"
+								},
+								{
+									"key": "functionName",
+									"value": "Product Summary"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Summary Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/service-agreements/{{MSA_ID}}/users/2e22be85-e87d-4280-ba4c-50b2f7f725e4/permissions",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"service-agreements",
+								"{{MSA_ID}}",
+								"users",
+								"2e22be85-e87d-4280-ba4c-50b2f7f725e4",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Participant of Service Aggreement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/service-agreements/usercontext/participants",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"service-agreements",
+								"usercontext",
+								"participants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service Aggrement detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/serviceagreements/{{MSA_ID}}",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"serviceagreements",
+								"{{MSA_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Item permission context",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/users/data-item-permissions",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"users",
+								"data-item-permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Permission",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var acc;",
+									"response.currentAccounts.products.forEach(getAccNum)",
+									"",
+									"function getAccNum(item, arr){",
+									"    if(item.currency === 'MUR'){",
+									"        var balance = parseInt(item.availableBalance);",
+									"        if(balance>0){",
+									"            acc=item.id;",
+									"        }",
+									"         ",
+									"    }",
+									"}",
+									"",
+									"tests[\"id144 = \" + acc] = true; ",
+									"postman.setEnvironmentVariable(\"account_num\", acc);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{access_token}}"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "{{xsrf-token}}"
+							},
+							{
+								"key": "productType",
+								"type": "text",
+								"value": "SavingsAccounts",
+								"disabled": true
+							},
+							{
+								"key": "currency",
+								"type": "text",
+								"value": "MUR,EUR",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{gatewayUrl}}/api/access-control/client-api/v2/accessgroups/users/permissions/summary",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"access-control",
+								"client-api",
+								"v2",
+								"accessgroups",
+								"users",
+								"permissions",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Consent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6WyJST0xFX0FETUlOIiwiUk9MRV9ncm91cF9hZG1pbihBRE1JTikiLCJST0xFX0FDVFVBVE9SIl0sImNsaWVudF9pZCI6IlRva2VuLWNvbnZlcnRlciIsIm5hZiI6MTY5ODkwODIzOCwiaWRwIjp7InN1YiI6ImFkbWluIn0sImNuZXhwIjp0cnVlLCJzY29wZSI6W10sImFubG9jIjp0cnVlLCJhbmV4cCI6dHJ1ZSwiZXhwIjoxNjk4ODI1NDM4LCJlbmJsIjp0cnVlLCJzYWlkIjoiNDAyODlkOGY4NDk0NDBmZDAxODQ5NDUwZjBhOTAwMDEiLCJpYXQiOjE2OTg4MjE4MzgsImp0aSI6ImUwNDFmNGU3LTcyNWUtNDMxZi1hYWM5LTBkMDAxMGNhYTViNSIsInRyYW5zIjoiY29va2llIn0.jbyzDg2sqXXHs1mmlguH6NSkex1k1PpiDMX_KxqiY2M}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bban\": \"FR8617569000706578679227J23\",\n  \"bic\": \"ICICINBB002\",\n  \"mobileNumber\": \"9821234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"olb-linking-service",
+								"client-api",
+								"v1",
+								"account",
+								"consent"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Account Consent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6WyJST0xFX0FETUlOIiwiUk9MRV9ncm91cF9hZG1pbihBRE1JTikiLCJST0xFX0FDVFVBVE9SIl0sImNsaWVudF9pZCI6IlRva2VuLWNvbnZlcnRlciIsIm5hZiI6MTY5ODkwODIzOCwiaWRwIjp7InN1YiI6ImFkbWluIn0sImNuZXhwIjp0cnVlLCJzY29wZSI6W10sImFubG9jIjp0cnVlLCJhbmV4cCI6dHJ1ZSwiZXhwIjoxNjk4ODI1NDM4LCJlbmJsIjp0cnVlLCJzYWlkIjoiNDAyODlkOGY4NDk0NDBmZDAxODQ5NDUwZjBhOTAwMDEiLCJpYXQiOjE2OTg4MjE4MzgsImp0aSI6ImUwNDFmNGU3LTcyNWUtNDMxZi1hYWM5LTBkMDAxMGNhYTViNSIsInRyYW5zIjoiY29va2llIn0.jbyzDg2sqXXHs1mmlguH6NSkex1k1PpiDMX_KxqiY2M}",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{xsrf-token}}",
+										"type": "text"
+									},
+									{
+										"key": "X-XSRF-TOKEN",
+										"value": "{{xsrf-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bban\": \"12345678901234\",\n  \"bic\": \"ICICINBB002\",\n  \"mobileNumber\": \"9821234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent",
+									"host": [
+										"{{gatewayUrl}}"
+									],
+									"path": [
+										"api",
+										"olb-linking-service",
+										"client-api",
+										"v1",
+										"account",
+										"consent"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Xss-Protection",
+									"value": "1 ; mode=block"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=6ae87671-03d6-4597-a59b-7697226fb9fa; Path=/"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 11:00:15 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"consentId\": \"C1234\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Account Consent Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6WyJST0xFX0FETUlOIiwiUk9MRV9ncm91cF9hZG1pbihBRE1JTikiLCJST0xFX0FDVFVBVE9SIl0sImNsaWVudF9pZCI6IlRva2VuLWNvbnZlcnRlciIsIm5hZiI6MTY5ODkwODIzOCwiaWRwIjp7InN1YiI6ImFkbWluIn0sImNuZXhwIjp0cnVlLCJzY29wZSI6W10sImFubG9jIjp0cnVlLCJhbmV4cCI6dHJ1ZSwiZXhwIjoxNjk4ODI1NDM4LCJlbmJsIjp0cnVlLCJzYWlkIjoiNDAyODlkOGY4NDk0NDBmZDAxODQ5NDUwZjBhOTAwMDEiLCJpYXQiOjE2OTg4MjE4MzgsImp0aSI6ImUwNDFmNGU3LTcyNWUtNDMxZi1hYWM5LTBkMDAxMGNhYTViNSIsInRyYW5zIjoiY29va2llIn0.jbyzDg2sqXXHs1mmlguH6NSkex1k1PpiDMX_KxqiY2M}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"bban\": \"FR8617569000706578679227J23\",\n  \"bic\": \"ICICINBB002\",\n  \"mobileNumber\": \"9821234567\",\n  \"otp\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent/C1234/authorization",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"olb-linking-service",
+								"client-api",
+								"v1",
+								"account",
+								"consent",
+								"C1234",
+								"authorization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Consent Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6WyJST0xFX0FETUlOIiwiUk9MRV9ncm91cF9hZG1pbihBRE1JTikiLCJST0xFX0FDVFVBVE9SIl0sImNsaWVudF9pZCI6IlRva2VuLWNvbnZlcnRlciIsIm5hZiI6MTY5ODkwODIzOCwiaWRwIjp7InN1YiI6ImFkbWluIn0sImNuZXhwIjp0cnVlLCJzY29wZSI6W10sImFubG9jIjp0cnVlLCJhbmV4cCI6dHJ1ZSwiZXhwIjoxNjk4ODI1NDM4LCJlbmJsIjp0cnVlLCJzYWlkIjoiNDAyODlkOGY4NDk0NDBmZDAxODQ5NDUwZjBhOTAwMDEiLCJpYXQiOjE2OTg4MjE4MzgsImp0aSI6ImUwNDFmNGU3LTcyNWUtNDMxZi1hYWM5LTBkMDAxMGNhYTViNSIsInRyYW5zIjoiY29va2llIn0.jbyzDg2sqXXHs1mmlguH6NSkex1k1PpiDMX_KxqiY2M}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bban\": \"12345678901234\",\n  \"bic\": \"ICICINBB002\",\n  \"mobileNumber\": \"9821234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/linking-service/service-api/v1/consent",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"linking-service",
+								"service-api",
+								"v1",
+								"consent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Consent Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6WyJST0xFX0FETUlOIiwiUk9MRV9ncm91cF9hZG1pbihBRE1JTikiLCJST0xFX0FDVFVBVE9SIl0sImNsaWVudF9pZCI6IlRva2VuLWNvbnZlcnRlciIsIm5hZiI6MTY5ODkwODIzOCwiaWRwIjp7InN1YiI6ImFkbWluIn0sImNuZXhwIjp0cnVlLCJzY29wZSI6W10sImFubG9jIjp0cnVlLCJhbmV4cCI6dHJ1ZSwiZXhwIjoxNjk4ODI1NDM4LCJlbmJsIjp0cnVlLCJzYWlkIjoiNDAyODlkOGY4NDk0NDBmZDAxODQ5NDUwZjBhOTAwMDEiLCJpYXQiOjE2OTg4MjE4MzgsImp0aSI6ImUwNDFmNGU3LTcyNWUtNDMxZi1hYWM5LTBkMDAxMGNhYTViNSIsInRyYW5zIjoiY29va2llIn0.jbyzDg2sqXXHs1mmlguH6NSkex1k1PpiDMX_KxqiY2M}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"olb-linking-service",
+								"client-api",
+								"v1",
+								"account",
+								"consent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Consent Authorization",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"access_token\", response.access_token);",
+									"postman.setEnvironmentVariable(\"refresh_token\", response.refresh_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "bearer {{access_token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"otp\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent/C1234/authorization",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"olb-linking-service",
+								"client-api",
+								"v1",
+								"account",
+								"consent",
+								"C1234",
+								"authorization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Consent Authorization Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"access_token\", response.access_token);",
+									"postman.setEnvironmentVariable(\"refresh_token\", response.refresh_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "bearer {{access_token}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/olb-linking-service/client-api/v1/account/consent/C1234/authorization",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"olb-linking-service",
+								"client-api",
+								"v1",
+								"account",
+								"consent",
+								"C1234",
+								"authorization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requestedExecutionDate\": \"2020-05-21\",\n    \"batchBooking\": false,\n    \"originatorAccount\": {\n        \"identification\": {\n            \"identification\": \"{{account_num}}\",\n            \"schemeName\": \"ID\"\n        },\n        \"name\": \"Current account\"\n    },\n    \"paymentType\": \"SEPA_CREDIT_TRANSFER\",\n    \"transferTransactionInformation\": {\n        \"instructedAmount\": {\n            \"amount\": \"1\",\n            \"currencyCode\": \"MUR\"\n        },\n        \"counterparty\": {\n            \"name\": \"Test 1\"\n        },\n        \"counterpartyAccount\": {\n            \"identification\": {\n                \"identification\": \"e2bb8226-429c-42b8-9dad-0a3f3dc61775\",\n                \"schemeName\": \"ID\"\n\n            },\n            \"name\": \"Test\"\n        },\n        \"counterpartyBank\": {\n            \"bankBranchCode\": \"TSTBMUMU\",\n            \"name\": \"ABC Banking Corporation \"\n        },\n        \"messageToBank\": \"Message to bank\",\n        \"remittanceInformation\": \"New TXn 1 MUR\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/payment-order-service/client-api/v2/payment-orders/validate?_csrf={{xsrf-token}}",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"payment-order-service",
+								"client-api",
+								"v2",
+								"payment-orders",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "_csrf",
+									"value": "{{xsrf-token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Payment Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+									"console.log(xsrfCookie.value);",
+									"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentType\": \"SEPA_CREDIT_TRANSFER\",\n  \"originatorAccount\": {\n    \"identification\": {\n      \"identification\": \"81dcde65-4e08-4644-95ea-56f12e676d69\",\n      \"schemeName\": \"ID\"\n    }\n  },\n  \"requestedExecutionDate\": \"2020-10-11\",\n  \"transferTransactionInformation\": {\n    \"instructedAmount\": {\n      \"amount\": \"100.00\",\n      \"currencyCode\": \"EUR\"\n    },\n    \"counterparty\": {\n      \"name\": \"B. Dittrich\"\n    },\n    \"counterpartyAccount\": {\n      \"identification\": {\n                \"identification\": \"FR8617569000706578679227J23\",\n                \"schemeName\": \"IBAN\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/payment-order-service/client-api/v2/payment-orders?_csrf={{xsrf-token}}",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"payment-order-service",
+								"client-api",
+								"v2",
+								"payment-orders"
+							],
+							"query": [
+								{
+									"key": "_csrf",
+									"value": "{{xsrf-token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Currencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"var response = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", response.access_token);",
+							"postman.setEnvironmentVariable(\"refresh_token\", response.refresh_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{gatewayUrl}}/api/exchange-rate-service/client-api/v1/exchange/currencies",
+					"host": [
+						"{{gatewayUrl}}"
+					],
+					"path": [
+						"api",
+						"exchange-rate-service",
+						"client-api",
+						"v1",
+						"exchange",
+						"currencies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Currencies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{gatewayUrl}}/api/exchange-rate-service/client-api/v1/exchange/currencies",
+							"host": [
+								"{{gatewayUrl}}"
+							],
+							"path": [
+								"api",
+								"exchange-rate-service",
+								"client-api",
+								"v1",
+								"exchange",
+								"currencies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Xss-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=237ab4c2-07c8-493c-9ad1-5b6a1732518b; Path=/"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 Oct 2023 05:37:36 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"code\": \"EUR\"\n    },\n    {\n        \"code\": \"GBP\"\n    },\n    {\n        \"code\": \"USD\"\n    },\n    {\n        \"code\": \"INR\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Product Summary Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+							"console.log(xsrfCookie.value);",
+							"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var acc;",
+							"response.currentAccounts.products.forEach(getAccNum)",
+							"",
+							"function getAccNum(item, arr){",
+							"    if(item.currency === 'MUR'){",
+							"        var balance = parseInt(item.availableBalance);",
+							"        if(balance>0){",
+							"            acc=item.id;",
+							"        }",
+							"         ",
+							"    }",
+							"}",
+							"",
+							"tests[\"id144 = \" + acc] = true; ",
+							"postman.setEnvironmentVariable(\"account_num\", acc);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer {{access_token}}"
+					},
+					{
+						"key": "XSRF-TOKEN",
+						"type": "text",
+						"value": "{{xsrf-token}}"
+					},
+					{
+						"key": "productType",
+						"type": "text",
+						"value": "SavingsAccounts",
+						"disabled": true
+					},
+					{
+						"key": "currency",
+						"type": "text",
+						"value": "MUR,EUR",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{gatewayUrl}}/api/access-groups/client-api/v3/accessgroups/users/by-permissions",
+					"host": [
+						"{{gatewayUrl}}"
+					],
+					"path": [
+						"api",
+						"access-groups",
+						"client-api",
+						"v3",
+						"accessgroups",
+						"users",
+						"by-permissions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

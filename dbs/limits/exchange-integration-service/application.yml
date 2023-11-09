@@ -1,0 +1,9 @@
+---
+### Live profile
+spring:
+  profiles: live
+
+logging:
+  level:
+    com.backbase: DEBUG
+    org.springframework: DEBUG

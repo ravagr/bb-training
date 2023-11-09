@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: registry
+  jmx:
+    default-domain: ${spring.application.name}
+  cloud:
+    config:
+      enabled: false
+      uri: https://backbase.config:8888

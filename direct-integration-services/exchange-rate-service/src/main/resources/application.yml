@@ -1,0 +1,38 @@
+server:
+  port: 9912
+
+# API Registry client configuration
+eureka:
+  instance:
+    metadata-map:
+      public: true
+      role: live
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/registry/eureka/
+
+# Configure Internal JWT handler
+sso:
+  jwt:
+    internal:
+      signature:
+        key:
+          type: ENV
+          value: SIG_SECRET_KEY
+
+# Spring health monitoring
+management:
+  health:
+    jms:
+      enabled: false
+logging:
+  level:
+    com.backbase: DEBUG
+    org.springframework: DEBUG
+
+transferwise:
+  url:
+    base: https://56d2e6c7-69ef-40a7-b2de-b84792d2ed14.mock.pstmn.io/v1
+    currencies: ${transferwise.url.base}/borderless-accounts/balance-currencies
+    rates: ${transferwise.url.base}/rates?source={source}&target={target}&from={from}&to={to}
+    fee: ${transferwise.url.base}/borderless-accounts/fee

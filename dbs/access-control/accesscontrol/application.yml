@@ -1,0 +1,21 @@
+---
+### Live profile
+spring:
+  profiles: live
+  datasource:
+    driver-class-name: ${spring.datasource.driver-class-name}
+    username: ${spring.datasource.username.accesscontrol-pandp-service}
+    password: ${spring.datasource.password.accesscontrol-pandp-service}
+    url: ${spring.datasource.url.accesscontrol-pandp-service}
+
+backbase:
+  accesscontrol:
+    token:
+      expiration: 1000
+      initPhrase: RandomInitVecto2
+      key: Bar12345Bar12345
+
+logging:
+  level:
+    com.backbase: DEBUG
+    org.springframework: DEBUG

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "bban": {
+      "type": "string"
+    },
+    "bic": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bban",
+    "bic",
+    "mobileNumber",
+    "otp"
+  ]
+}

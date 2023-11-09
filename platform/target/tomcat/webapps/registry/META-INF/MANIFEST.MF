@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: The Backbase API Registry :: Service
+Implementation-Version: 1.19.0
+Build-Jdk-Spec: 1.8
+Created-By: Maven Archiver 3.4.0
+Implementation-Vendor: Backbase B.V.
+

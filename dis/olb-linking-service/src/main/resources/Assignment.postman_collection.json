@@ -1,0 +1,2032 @@
+
+{
+	"info": {
+		"_postman_id": "f5b268f6-462e-49be-af95-ae2dc2bbe4b9",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21494079"
+	},
+	"item": [
+		{
+			"name": "5. Create product kind and product Copy",
+			"item": [
+				{
+					"name": "Create Product Catalogue with one product: Current Account Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Sara_Internal_ID\", response.id);",
+									"console.log(\"creating Sara le\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/products",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product Catalogue with one product: Current Account Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/products",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bd2d513a-6f6a-47db-a821-98081df91d0b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product Catalogue with one product: Current Account Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Sara_Internal_ID\", response.id);",
+									"console.log(\"creating Sara le\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"productId3\",\r\n    \"productKindId\": \"kind2\",\r\n    \"productKindName\": \"Savings Account\",\r\n    \"productTypeId\": \"Savings-Account\",\r\n    \"productTypeName\": \"Savings Account\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/products",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product Catalogue with one product: Current Account Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/products",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bd2d513a-6f6a-47db-a821-98081df91d0b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product kind",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"externalKindId\": \"kind101\",\n  \"kindName\": \"Non MCB Accounts\",\n  \"kindUri\": \"non-mcb-accounts\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/product-kinds",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"product-kinds"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product kind",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"externalKindId\": \"kind101\",\n  \"kindName\": \"Non MCB Accounts\",\n  \"kindUri\": \"non-mcb-accounts\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/product-kinds",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"product-kinds"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:49:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "3. Create Data Groups and Function Groups Copy",
+			"item": [
+				{
+					"name": "Create DG for MSA of User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"DG_Sara\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Saving Accounts\",\r\n        \"description\": \"user accesses this account\",\r\n        \"externalServiceAgreementId\": \"Bank_External\",\r\n        \"type\": \"ARRANGEMENTS\",\r\n        \"dataItems\": [\r\n            {\r\n                \"externalIdIdentifier\": \"Sample Saving Bank Account\"\r\n            }\r\n        ]\r\n    }\r\n]"
+						},
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/data-groups/batch",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"data-groups",
+								"batch"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create DG for MSA of User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"name\": \"Bank - Data Group\",\r\n        \"description\": \"user accesses this account\",\r\n        \"externalServiceAgreementId\": \"Bank_External\",\r\n        \"type\": \"ARRANGEMENTS\",\r\n        \"dataItems\": [\r\n            {\r\n                \"externalIdIdentifier\": \"Bank Account\"\r\n            }\r\n        ]\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/data-groups/batch",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"data-groups",
+										"batch"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 07:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"40289d8f8b84a492018b84b9e1010000\",\n        \"status\": \"201\",\n        \"errors\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get all Business Functions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"",
+									"var manageUsersId = response.filter(f => f.name === \"Manage Users\")[0].functionId;",
+									"var manageLEId = response.filter(f => f.name === \"Manage Legal Entities\")[0].functionId;",
+									"var assignPermissionsId = response.filter(f => f.name === \"Assign Permissions\")[0].functionId;",
+									"var sepaCTId = response.filter(f => f.name === \"SEPA CT\")[0].functionId;",
+									"",
+									"var productSummaryID = response.filter(f => f.name === \"Product Summary\")[0].functionId;",
+									"var transactionsId = response.filter(f => f.name === \"Transactions\")[0].functionId;",
+									"var contactsId = response.filter(f => f.name === \"Contacts\")[0].functionId;",
+									"",
+									"postman.setEnvironmentVariable(\"FG_ID_MANAGE_USERS\", manageUsersId);",
+									"postman.setEnvironmentVariable(\"FG_ID_MANAGE_LE\", manageLEId);",
+									"postman.setEnvironmentVariable(\"FG_ID_ASSIGN_PERMISSIONS\", assignPermissionsId);",
+									"postman.setEnvironmentVariable(\"FG_ID_PRODUCT_SUMMARY\", productSummaryID);",
+									"postman.setEnvironmentVariable(\"FG_ID_MANAGE_TRANSACTIONS\", transactionsId);",
+									"postman.setEnvironmentVariable(\"FG_ID_CONTACTS\", contactsId);",
+									"postman.setEnvironmentVariable(\"SEPA_CT_ID\", sepaCTId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/serviceagreements/Bank_External/business-functions",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"serviceagreements",
+								"Bank_External",
+								"business-functions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Business Functions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/serviceagreements/Bank_External/business-functions",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"serviceagreements",
+										"Bank_External",
+										"business-functions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 07:55:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"functionId\": \"1070\",\n        \"functionCode\": \"p2p.transfer\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"P2P Transfer\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1026\",\n        \"functionCode\": \"us.billpay.enrolment\",\n        \"resource\": \"Billpay\",\n        \"resourceCode\": \"billpay\",\n        \"name\": \"US Billpay Enrolment\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1013\",\n        \"functionCode\": \"audit\",\n        \"resource\": \"Audit\",\n        \"resourceCode\": \"audit\",\n        \"name\": \"Audit\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1043\",\n        \"functionCode\": \"sepa.credit.transfer.intc\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"SEPA CT - Intracompany\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1068\",\n        \"functionCode\": \"cash.flow.forecasting\",\n        \"resource\": \"Cash Flow\",\n        \"resourceCode\": \"cash.flow\",\n        \"name\": \"Cash Flow Forecasting\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1032\",\n        \"functionCode\": \"assign.approval.policies\",\n        \"resource\": \"Approvals\",\n        \"resourceCode\": \"approvals\",\n        \"name\": \"Assign Approval Policies\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1050\",\n        \"functionCode\": \"unlock.user\",\n        \"resource\": \"Identities\",\n        \"resourceCode\": \"identities\",\n        \"name\": \"Unlock User\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1049\",\n        \"functionCode\": \"lock.user\",\n        \"resource\": \"Identities\",\n        \"resourceCode\": \"identities\",\n        \"name\": \"Lock User\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1072\",\n        \"functionCode\": \"flow.task.statistics\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Task Statistics\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1009\",\n        \"functionCode\": \"assign.permissions\",\n        \"resource\": \"Service Agreement\",\n        \"resourceCode\": \"service.agreement\",\n        \"name\": \"Assign Permissions\",\n        \"privileges\": [\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1037\",\n        \"functionCode\": \"batch.sepa\",\n        \"resource\": \"Batch\",\n        \"resourceCode\": \"batch\",\n        \"name\": \"Batch - SEPA CT\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1078\",\n        \"functionCode\": \"manage.authorized.users\",\n        \"resource\": \"User\",\n        \"resourceCode\": \"user\",\n        \"name\": \"Manage Authorized Users\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1076\",\n        \"functionCode\": \"act.on.behalf.of\",\n        \"resource\": \"Employee\",\n        \"resourceCode\": \"employee\",\n        \"name\": \"Act on behalf of\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1010\",\n        \"functionCode\": \"manage.users\",\n        \"resource\": \"User\",\n        \"resourceCode\": \"user\",\n        \"name\": \"Manage Users\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1059\",\n        \"functionCode\": \"flow.case.statistics\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Case Statistics\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1073\",\n        \"functionCode\": \"uk.chaps\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"UK CHAPS\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1075\",\n        \"functionCode\": \"emulate\",\n        \"resource\": \"Employee\",\n        \"resourceCode\": \"employee\",\n        \"name\": \"Emulate\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1019\",\n        \"functionCode\": \"manage.data.groups\",\n        \"resource\": \"Entitlements\",\n        \"resourceCode\": \"entitlements\",\n        \"name\": \"Manage Data Groups\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1015\",\n        \"functionCode\": \"intra.company.payments\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"Intra Company Payments\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1028\",\n        \"functionCode\": \"manage.service.agreements\",\n        \"resource\": \"Service Agreement\",\n        \"resourceCode\": \"service.agreement\",\n        \"name\": \"Manage Service Agreements\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1044\",\n        \"functionCode\": \"us.domestic.wire.intc\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"US Domestic Wire - Intracompany\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1052\",\n        \"functionCode\": \"sepa.credit.transfer.closed\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"SEPA CT - closed\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1045\",\n        \"functionCode\": \"us.foreign.wire.intc\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"US Foreign Wire - Intracompany\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1031\",\n        \"functionCode\": \"manage.topics\",\n        \"resource\": \"Message Center\",\n        \"resourceCode\": \"message.center\",\n        \"name\": \"Manage Topics\",\n        \"privileges\": [\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1053\",\n        \"functionCode\": \"a2a.transfer\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"A2A Transfer\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1042\",\n        \"functionCode\": \"ach.credit.intc\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"ACH Credit - Intracompany\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1034\",\n        \"functionCode\": \"manage.identities\",\n        \"resource\": \"Identities\",\n        \"resourceCode\": \"identities\",\n        \"name\": \"Manage Identities\",\n        \"privileges\": [\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1047\",\n        \"functionCode\": \"manage.budgets\",\n        \"resource\": \"Personal Finance Management\",\n        \"resourceCode\": \"personal.finance.management\",\n        \"name\": \"Manage Budgets\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1033\",\n        \"functionCode\": \"manage.approval.policy.level\",\n        \"resource\": \"Approvals\",\n        \"resourceCode\": \"approvals\",\n        \"name\": \"Manage Approval Policy and Level\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1003\",\n        \"functionCode\": \"transactions\",\n        \"resource\": \"Transactions\",\n        \"resourceCode\": \"transactions\",\n        \"name\": \"Transactions\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1035\",\n        \"functionCode\": \"manage.user.profiles\",\n        \"resource\": \"User Profiles\",\n        \"resourceCode\": \"user.profiles\",\n        \"name\": \"Manage User Profiles\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1039\",\n        \"functionCode\": \"supervise.messages\",\n        \"resource\": \"Message Center\",\n        \"resourceCode\": \"message.center\",\n        \"name\": \"Supervise Messages\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1005\",\n        \"functionCode\": \"contacts\",\n        \"resource\": \"Contacts\",\n        \"resourceCode\": \"contacts\",\n        \"name\": \"Contacts\",\n        \"privileges\": [\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1041\",\n        \"functionCode\": \"ach.credit.transfer\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"ACH Credit Transfer\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1061\",\n        \"functionCode\": \"flow.journey.definitions\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Journey Definitions\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1071\",\n        \"functionCode\": \"payment.templates\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"Payment Templates\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1016\",\n        \"functionCode\": \"manage.statements\",\n        \"resource\": \"Account Statements\",\n        \"resourceCode\": \"account.statements\",\n        \"name\": \"Manage Statements\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1048\",\n        \"functionCode\": \"manage.saving.goals\",\n        \"resource\": \"Personal Finance Management\",\n        \"resourceCode\": \"personal.finance.management\",\n        \"name\": \"Manage Saving Goals\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1018\",\n        \"functionCode\": \"us.foreign.wire\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"US Foreign Wire\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1024\",\n        \"functionCode\": \"us.billpay.payees.search\",\n        \"resource\": \"Contacts\",\n        \"resourceCode\": \"contacts\",\n        \"name\": \"US Billpay Payees-Search\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1006\",\n        \"functionCode\": \"product.summary\",\n        \"resource\": \"Product Summary\",\n        \"resourceCode\": \"product.summary\",\n        \"name\": \"Product Summary\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1046\",\n        \"functionCode\": \"ach.debit\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"ACH Debit\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1040\",\n        \"functionCode\": \"manage.global.limits\",\n        \"resource\": \"Limits\",\n        \"resourceCode\": \"limits\",\n        \"name\": \"Manage Global Limits\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1021\",\n        \"functionCode\": \"us.billpay.payments\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"US Billpay Payments\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1011\",\n        \"functionCode\": \"manage.legalentities\",\n        \"resource\": \"Legal Entity\",\n        \"resourceCode\": \"legalentity\",\n        \"name\": \"Manage Legal Entities\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1051\",\n        \"functionCode\": \"manage.devices\",\n        \"resource\": \"Device\",\n        \"resourceCode\": \"device\",\n        \"name\": \"Manage Devices\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1066\",\n        \"functionCode\": \"manage.other.users.devices\",\n        \"resource\": \"Device\",\n        \"resourceCode\": \"device\",\n        \"name\": \"Manage Other User's Devices\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1063\",\n        \"functionCode\": \"flow.task.dates\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Manage Task Dates\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1014\",\n        \"functionCode\": \"manage.shadow.limits\",\n        \"resource\": \"Limits\",\n        \"resourceCode\": \"limits\",\n        \"name\": \"Manage Shadow Limits\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1069\",\n        \"functionCode\": \"batch.ach.debit\",\n        \"resource\": \"Batch\",\n        \"resourceCode\": \"batch\",\n        \"name\": \"Batch - ACH Debit\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1017\",\n        \"functionCode\": \"us.domestic.wire\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"US Domestic Wire\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1055\",\n        \"functionCode\": \"flow.case.archive\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Archive Case\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1022\",\n        \"functionCode\": \"us.billpay.payees\",\n        \"resource\": \"Contacts\",\n        \"resourceCode\": \"contacts\",\n        \"name\": \"US Billpay Payees\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1025\",\n        \"functionCode\": \"us.billpay.payees.summary\",\n        \"resource\": \"Contacts\",\n        \"resourceCode\": \"contacts\",\n        \"name\": \"US Billpay Payees-Summary\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1065\",\n        \"functionCode\": \"stop.checks\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"Stop Checks\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1060\",\n        \"functionCode\": \"flow.journey.statistics\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Journey Statistics\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1038\",\n        \"functionCode\": \"manage.messages\",\n        \"resource\": \"Message Center\",\n        \"resourceCode\": \"message.center\",\n        \"name\": \"Manage Messages\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1002\",\n        \"functionCode\": \"payments.sepa\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"SEPA CT\",\n        \"privileges\": [\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1056\",\n        \"functionCode\": \"flow.case.document\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Manage Case Documents\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1023\",\n        \"functionCode\": \"us.billpay.accounts\",\n        \"resource\": \"Arrangements\",\n        \"resourceCode\": \"arrangements\",\n        \"name\": \"US Billpay Accounts\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1057\",\n        \"functionCode\": \"flow.case.comment\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Manage Case Comments\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1074\",\n        \"functionCode\": \"uk.faster.payments\",\n        \"resource\": \"Payments\",\n        \"resourceCode\": \"payments\",\n        \"name\": \"UK Faster Payments\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1058\",\n        \"functionCode\": \"flow.case.changelog\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Case Changelog\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1064\",\n        \"functionCode\": \"flow.task\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Manage Task\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1062\",\n        \"functionCode\": \"flow.task.assign\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Assign Task\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1012\",\n        \"functionCode\": \"manage.limits\",\n        \"resource\": \"Limits\",\n        \"resourceCode\": \"limits\",\n        \"name\": \"Manage Limits\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1077\",\n        \"functionCode\": \"flow.collection\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Access Collections\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1054\",\n        \"functionCode\": \"flow.case\",\n        \"resource\": \"Flow\",\n        \"resourceCode\": \"flow\",\n        \"name\": \"Manage Case\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1029\",\n        \"functionCode\": \"manage.actions.recipes\",\n        \"resource\": \"Actions\",\n        \"resourceCode\": \"actions\",\n        \"name\": \"Manage Action Recipes\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1027\",\n        \"functionCode\": \"access.actions.history\",\n        \"resource\": \"Actions\",\n        \"resourceCode\": \"actions\",\n        \"name\": \"Access Actions History\",\n        \"privileges\": [\n            {\n                \"privilege\": \"execute\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1030\",\n        \"functionCode\": \"manage.notifications\",\n        \"resource\": \"Notifications\",\n        \"resourceCode\": \"notifications\",\n        \"name\": \"Manage Notifications\",\n        \"privileges\": [\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1020\",\n        \"functionCode\": \"manage.function.groups\",\n        \"resource\": \"Entitlements\",\n        \"resourceCode\": \"entitlements\",\n        \"name\": \"Manage Function Groups\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1007\",\n        \"functionCode\": \"assign.users\",\n        \"resource\": \"Service Agreement\",\n        \"resourceCode\": \"service.agreement\",\n        \"name\": \"Assign Users\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": false\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": false\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1067\",\n        \"functionCode\": \"batch.ach.credit\",\n        \"resource\": \"Batch\",\n        \"resourceCode\": \"batch\",\n        \"name\": \"Batch - ACH Credit\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"create\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"edit\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"delete\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"approve\",\n                \"supportsLimit\": true\n            },\n            {\n                \"privilege\": \"cancel\",\n                \"supportsLimit\": true\n            }\n        ]\n    },\n    {\n        \"functionId\": \"1036\",\n        \"functionCode\": \"support.access.payments\",\n        \"resource\": \"Support Access\",\n        \"resourceCode\": \"support.access\",\n        \"name\": \"Support Access for Payments\",\n        \"privileges\": [\n            {\n                \"privilege\": \"view\",\n                \"supportsLimit\": false\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create FG user with Payment access",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"FG_Sara\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"admin fg for olb\",\r\n\t\"description\": \"This profile will control viewing of Product Summary and Transactions\",\r\n\t\"externalServiceAgreementId\": \"Bank_External\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_PRODUCT_SUMMARY}}\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_MANAGE_TRANSACTIONS}}\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n        {\r\n\t\t\t\"functionId\": \"1070\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t},\r\n            \t\t\t{\r\n\t\t\t\t \"privilege\": \"create\"\r\n\t\t\t},\r\n                        \t\t\t{\r\n\t\t\t\t\"privilege\": \"approve\"\r\n\t\t\t}\r\n\r\n            ]\r\n\t\t}\r\n       \r\n\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/function-groups",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"function-groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create FG user with Payment access",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"FG for user - Viewer of Product Summary and Transactions and payments international .wallet\",\r\n\t\"description\": \"This profile will control viewing of Product Summary and Transactions\",\r\n\t\"externalServiceAgreementId\": \"Bank_External\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_PRODUCT_SUMMARY}}\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_MANAGE_TRANSACTIONS}}\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t}\r\n       \r\n\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/function-groups",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"function-groups"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 07:57:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"40289d8f8b84a492018b84bd27370001\"\n}"
+						},
+						{
+							"name": "Create FG user with Payment access",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"admin fg\",\r\n\t\"description\": \"This profile will control viewing of Product Summary and Transactions\",\r\n\t\"externalServiceAgreementId\": \"Bank_External\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_PRODUCT_SUMMARY}}\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_MANAGE_TRANSACTIONS}}\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t}\r\n       \r\n\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/function-groups",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"function-groups"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 14:32:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"40289d8f8bad8b8b018baf58e47f000f\"\n}"
+						},
+						{
+							"name": "Create FG user with Payment access - olb",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"admin fg for olb\",\r\n\t\"description\": \"This profile will control viewing of Product Summary and Transactions\",\r\n\t\"externalServiceAgreementId\": \"Bank_External\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_PRODUCT_SUMMARY}}\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_MANAGE_TRANSACTIONS}}\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n        {\r\n\t\t\t\"functionId\": \"1070\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t},\r\n            \t\t\t{\r\n\t\t\t\t \"privilege\": \"create\"\r\n\t\t\t},\r\n                        \t\t\t{\r\n\t\t\t\t\"privilege\": \"approve\"\r\n\t\t\t}\r\n\r\n            ]\r\n\t\t}\r\n       \r\n\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/function-groups",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"function-groups"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Nov 2023 07:12:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"40289d8f8bb280a4018bb2ecb82f0000\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create FG User UPDATE FG",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"FG_Sara\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"identifier\": {\r\n      \"idIdentifier\": \"40289d8f8b84a492018b84bd27370001\"\r\n    },\r\n \"functionGroup\": {\r\n      \"name\": \"updated payment 4\",\r\n      \"description\": \"Some description for inputer\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_PRODUCT_SUMMARY}}\",\r\n            \"functionName\": \"Product Summary\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"functionId\": \"{{FG_ID_MANAGE_TRANSACTIONS}}\",\r\n            \"functionName\": \"Transactions\",\r\n\t\t\t\"assignedPrivileges\":  [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t}]\r\n\t\t},\r\n        {\r\n            \"functionName\": \"Manage Internationational Payments\",\r\n\t\t\t\"functionId\": \"1133\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"create\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"edit\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"delete\"\r\n\t\t\t}]\r\n\t\t},\r\n         {\r\n            \"functionName\": \"P2P Transfer\",\r\n\t\t\t\"functionId\": \"1070\",\r\n\t\t\t\"assignedPrivileges\": [{\r\n\t\t\t\t\"privilege\": \"view\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"create\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"edit\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"privilege\": \"delete\"\r\n\t\t\t}]\r\n\t\t}\r\n\r\n\r\n        \r\n\r\n\t]\r\n }\r\n    }\r\n]"
+						},
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/function-groups/batch/update",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"function-groups",
+								"batch",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Data group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n    \"name\": \"ALL\",\n    \"description\": \"ALL\",\n   \t\"externalServiceAgreementId\": \"Bank_External\",\n    \"type\": \"ARRANGEMENTS\",\n    \"dataItems\": [\n      {\n        \"externalIdIdentifier\": \"C12341699423885964\"\n      }]\n}]\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_integration}}v2/accessgroups/data-groups/batch",
+							"host": [
+								"{{url_integration}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"data-groups",
+								"batch"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n    \"name\": \"ALL\",\n    \"description\": \"ALL\",\n   \t\"externalServiceAgreementId\": \"Bank_External\",\n    \"type\": \"ARRANGEMENTS\"\n}]\n\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_integration}}v2/accessgroups/data-groups/batch",
+									"host": [
+										"{{url_integration}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"data-groups",
+										"batch"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 09:35:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"40289d8f8bad8b8b018bae49da010001\",\n        \"status\": \"201\",\n        \"errors\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Data group Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n[\n  {\n    \"idIdentifier\": \"40289d8f8bb280a4018bb3ea92840003\"\n  },\n  {\n    \"nameIdentifier\": {\n      \"name\": \"ALL\",\n      \"externalServiceAgreementId\": \"Bank_External\"\n    }\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_integration}}v2/accessgroups/data-groups/batch/delete",
+							"host": [
+								"{{url_integration}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"data-groups",
+								"batch",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Data group Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n[\n  {\n    \"idIdentifier\": \"40289d8f8bad8b8b018bae46a9e50000\"\n  },\n  {\n    \"nameIdentifier\": {\n      \"name\": \"ALL\",\n      \"externalServiceAgreementId\": \"Bank_External\"\n    }\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_integration}}v2/accessgroups/data-groups/batch/delete",
+									"host": [
+										"{{url_integration}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"data-groups",
+										"batch",
+										"delete"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 09:35:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"resourceId\": \"40289d8f8bad8b8b018bae46a9e50000\",\n        \"status\": \"200\",\n        \"errors\": []\n    },\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"ALL\",\n        \"status\": \"400\",\n        \"errors\": [\n            \"Invalid data group identifiers\"\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Data Groups Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serviceAgreementIdentifier\": {\n    \"idIdentifier\": \"40289d8f849440fd01849450f0a90001\"\n  },\n  \"dataItemIdentifier\": {\n   \n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_integration}}v2/accessgroups/data-groups/type/ARRANGEMENTS/search",
+							"host": [
+								"{{url_integration}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"data-groups",
+								"type",
+								"ARRANGEMENTS",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update All Data Groups",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"serviceAgreementIdentifier\": {\n    \"idIdentifier\": \"40289d8f849440fd01849450f0a90001\"\n  },\n  \"dataItemIdentifier\": {\n   \n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_integration}}v2/accessgroups/data-groups/type/ARRANGEMENTS/search",
+							"host": [
+								"{{url_integration}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"data-groups",
+								"type",
+								"ARRANGEMENTS",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "5. Create product kind and product",
+			"item": [
+				{
+					"name": "Create Product Catalogue with one product: Current Account Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Sara_Internal_ID\", response.id);",
+									"console.log(\"creating Sara le\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/products",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product Catalogue with one product: Current Account Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/products",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bd2d513a-6f6a-47db-a821-98081df91d0b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product Catalogue with one product: Current Account Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Sara_Internal_ID\", response.id);",
+									"console.log(\"creating Sara le\");",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"productId3\",\r\n    \"productKindId\": \"kind2\",\r\n    \"productKindName\": \"Savings Account\",\r\n    \"productTypeId\": \"Savings-Account\",\r\n    \"productTypeName\": \"Savings Account\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/products",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product Catalogue with one product: Current Account Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"productId2\",\r\n    \"productKindId\": \"kind101\",\r\n    \"productKindName\": \"Non MCB Accounts\",\r\n    \"productTypeId\": \"IPS-OLB-ACCT\",\r\n    \"productTypeName\": \"Non MCB Accounts\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/products",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:54:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bd2d513a-6f6a-47db-a821-98081df91d0b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product kind",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"externalKindId\": \"kind101\",\n  \"kindName\": \"Non MCB Accounts\",\n  \"kindUri\": \"non-mcb-accounts\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-product-summary}}integration-api/v2/product-kinds",
+							"host": [
+								"{{url-product-summary}}integration-api"
+							],
+							"path": [
+								"v2",
+								"product-kinds"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product kind",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"externalKindId\": \"kind101\",\n  \"kindName\": \"Non MCB Accounts\",\n  \"kindUri\": \"non-mcb-accounts\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-product-summary}}integration-api/v2/product-kinds",
+									"host": [
+										"{{url-product-summary}}integration-api"
+									],
+									"path": [
+										"v2",
+										"product-kinds"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 06:49:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "4. Assign permissions to Sara Copy 2",
+			"item": [
+				{
+					"name": "Assign Permission to user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"externalServiceAgreementId\": \"Bank_External\",\r\n    \"externalUserId\": \"admin\",\r\n    \"functionGroupDataGroups\": [\r\n      {\r\n        \"functionGroupIdentifier\": {\r\n          \"idIdentifier\": \"40289d8f8bb280a4018bb2ff37270001\"\r\n        },\r\n         \"dataGroupIdentifiers\": [\r\n          {\r\n            \"idIdentifier\": \"40289d8f8bb280a4018bb3ee71d90004\"\r\n          },\r\n          {\r\n                \"idIdentifier\": \"40289d8f8bb280a4018bb35d6d120002\"\r\n          },\r\n                {\r\n                \"idIdentifier\": \"40289d8f8bad8b8b018baed13d05000b\"\r\n          }\r\n          \r\n        ]\r\n       \r\n        \r\n      }\r\n    ]\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/users/permissions/user-permissions",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"users",
+								"permissions",
+								"user-permissions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Permission to user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"externalServiceAgreementId\": \"Bank_External\",\r\n    \"externalUserId\": \"admin\",\r\n    \"functionGroupDataGroups\": [\r\n      {\r\n        \"functionGroupIdentifier\": {\r\n          \"idIdentifier\": \"40289d8f8bad8b8b018baedcb3b5000d\"\r\n        },\r\n        \"dataGroupIdentifiers\": [\r\n          {\r\n            \"idIdentifier\": \"40289d8f8bad8b8b018baed70cb1000c\"\r\n          },\r\n          {\r\n                \"idIdentifier\": \"40289d8f8bad8b8b018baecd21e1000a\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/users/permissions/user-permissions",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"users",
+										"permissions",
+										"user-permissions"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 12:20:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"admin\",\n        \"status\": \"200\",\n        \"errors\": []\n    }\n]"
+						},
+						{
+							"name": "Assign Permission to user - olb",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"externalServiceAgreementId\": \"Bank_External\",\r\n    \"externalUserId\": \"admin\",\r\n    \"functionGroupDataGroups\": [\r\n      {\r\n        \"functionGroupIdentifier\": {\r\n          \"idIdentifier\": \"40289d8f8bb280a4018bb2ecb82f0000\"\r\n        },\r\n        \"dataGroupIdentifiers\": [\r\n          {\r\n            \"idIdentifier\": \"40289d8f8bad8b8b018baed70cb1000c\"\r\n          },\r\n          {\r\n                \"idIdentifier\": \"40289d8f8bad8b8b018baf55707e000e\"\r\n          }\r\n        ]\r\n        \r\n      }\r\n    ]\r\n  }\r\n]"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/users/permissions/user-permissions",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"users",
+										"permissions",
+										"user-permissions"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Nov 2023 07:14:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"admin\",\n        \"status\": \"200\",\n        \"errors\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Assign Permission to user Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"externalServiceAgreementId\": \"Bank_External\",\r\n    \"externalUserId\": \"admin\",\r\n    \"functionGroupDataGroups\": [\r\n      {\r\n        \"functionGroupIdentifier\": {\r\n          \"idIdentifier\": \"40289d8f8bad8b8b018baedcb3b5000d\"\r\n        },\r\n        \"dataGroupIdentifiers\": [\r\n          {\r\n            \"idIdentifier\": \"40289d8f8bad8b8b018baed70cb1000c\"\r\n          },\r\n          {\r\n                \"idIdentifier\": \"40289d8f8bad8b8b018baf55707e000e\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/users/permissions/user-permissions",
+							"host": [
+								"{{accessgroup-integration-service-url}}v2"
+							],
+							"path": [
+								"accessgroups",
+								"users",
+								"permissions",
+								"user-permissions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Permission to user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"externalServiceAgreementId\": \"Bank_External\",\r\n    \"externalUserId\": \"admin\",\r\n    \"functionGroupDataGroups\": [\r\n      {\r\n        \"functionGroupIdentifier\": {\r\n          \"idIdentifier\": \"40289d8f8bad8b8b018baedcb3b5000d\"\r\n        },\r\n        \"dataGroupIdentifiers\": [\r\n          {\r\n            \"idIdentifier\": \"40289d8f8bad8b8b018baed70cb1000c\"\r\n          },\r\n          {\r\n                \"idIdentifier\": \"40289d8f8bad8b8b018baecd21e1000a\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+								},
+								"url": {
+									"raw": "{{accessgroup-integration-service-url}}v2/accessgroups/users/permissions/user-permissions",
+									"host": [
+										"{{accessgroup-integration-service-url}}v2"
+									],
+									"path": [
+										"accessgroups",
+										"users",
+										"permissions",
+										"user-permissions"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Nov 2023 12:20:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"externalServiceAgreementId\": \"Bank_External\",\n        \"resourceId\": \"admin\",\n        \"status\": \"200\",\n        \"errors\": []\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "1. Get Legal Entity details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = JSON.parse(responseBody);",
+							"",
+							"postman.setEnvironmentVariable(\"msaIdForJohn\", response.id);",
+							"setTimeout(function(){}, 2000);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-le-integration}}v2/legalentities/bank",
+					"host": [
+						"{{url-le-integration}}v2"
+					],
+					"path": [
+						"legalentities",
+						"bank"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "1. Get Legal Entity details (Ravi) Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-le-integration}}v2/legalentities/bank",
+							"host": [
+								"{{url-le-integration}}v2"
+							],
+							"path": [
+								"legalentities",
+								"bank"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Nov 2023 12:13:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"externalId\": \"Bank\",\n    \"name\": \"Bank\",\n    \"type\": \"BANK\",\n    \"id\": \"40289d8f849440fd01849450efa30000\"\n}"
+				}
+			]
+		},
+		{
+			"name": "2. Create Arrangement (ACC1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\");",
+							"console.log(xsrfCookie.value);",
+							"postman.setEnvironmentVariable(\"xsrf-token\", xsrfCookie.value);",
+							"pm.test(\"Check if XID is present\",() => {",
+							"  pm.expect(pm.response.text()).to.include(\"xId\");",
+							"});",
+							"var response = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"XID\", response.xId);",
+							"console.log(\"Generating OTP XID\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{access_token}}",
+						"type": "text"
+					},
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrf-token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-MFA",
+						"value": "593652",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-ID",
+						"value": "cc701755-0ecf-418c-9391-cd8ba60129272022-06-27T12:51:32.216695",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"Sample Saving Bank Account\",\r\n\"legalEntityIds\": [\"Bank\"],\r\n\"productId\": \"productId3\",\r\n\"name\": \"ACC1 by Bank User\",\r\n\"bankAlias\": \"alias1\",\r\n\"bookedBalance\": 100.1,\r\n\"availableBalance\": 100.2,\r\n\"creditLimit\": 100.3,\r\n\"IBAN\": \"NL67ABNA8835593166\",\r\n\"BBAN\": \"1234567890\",\r\n\"currency\": \"INR\",\r\n\"externalTransferAllowed\": true,\r\n\"urgentTransferAllowed\": false,\r\n\"accruedInterest\": 100.00,\r\n\"number\": \"PANS\",\r\n\"principalAmount\": 100.4,\r\n\"currentInvestmentValue\": 100.5,\r\n\"BIC\": \"BIC123\",\r\n\"bankBranchCode\": \"bankBranchCode1\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url-product-summary}}integration-api/v2/arrangements",
+					"host": [
+						"{{url-product-summary}}integration-api"
+					],
+					"path": [
+						"v2",
+						"arrangements"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>service-sdk-starter-core</artifactId>
+        <groupId>com.backbase.buildingblocks</groupId>
+        <version>11.3.0</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.backbase.identity</groupId>
+    <artifactId>bb-authentication-token-converter-service</artifactId>
+    <version>1.2.41</version>
+    <packaging>war</packaging>
+
+    <name>bb-authentication-token-converter-service</name>
+    <description>BAS Token Converter Service</description>
+
+    <scm>
+        <developerConnection>scm:git:ssh://git@stash.backbase.com:7999/iam/bb-authentication-token-converter-service.git</developerConnection>
+        <tag>bb-authentication-token-converter-service-1.2.41</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>Backbase Artifact Builds Repository</id>
+            <name>artifacts.backbase.com-builds</name>
+            <url>https://artifacts.backbase.com/staging</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <platform-starter-version>1.4.45</platform-starter-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <buildingblocks.external-jwt.version>2.6.0</buildingblocks.external-jwt.version>
+
+        <!-- japicmp properties -->
+        <previous.release.version>1.2.20</previous.release.version>
+        <previous.release.groupId>${project.groupId}</previous.release.groupId>
+        <previous.release.artifactId>${project.artifactId}</previous.release.artifactId>
+        <japicmp.skip>true</japicmp.skip>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.backbase.buildingblocks</groupId>
+            <artifactId>external-jwt</artifactId>
+            <version>${buildingblocks.external-jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.backbase.identity</groupId>
+            <artifactId>platform-starter-token-converter</artifactId>
+            <version>${platform-starter-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!-- Surefire plugin - for running unit tests-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18</version>
+                <configuration>
+                    <!-- Sets the VM argument line used when unit tests are run. -->
+                    <argLine>${surefireArgLine}</argLine>
+                    <skipTests>${skip.unit.tests}</skipTests>
+                    <!-- Excludes integration tests when unit tests are run. -->
+                    <excludes>
+                        <exclude>**/*IT.java</exclude>
+                    </excludes>
+                    <systemPropertyVariables>
+                        <PropertyName1>SIG_SECRET_KEY</PropertyName1>
+                        <PropertyName2>EXTERNAL_SIG_SECRET_KEY</PropertyName2>
+                        <PropertyName2>EXTERNAL_ENC_SECRET_KEY</PropertyName2>
+                    </systemPropertyVariables>
+                    <environmentVariables>
+                        <SIG_SECRET_KEY>JWTSecretKeyDontUseInProduction!</SIG_SECRET_KEY>
+                        <EXTERNAL_SIG_SECRET_KEY>JWTSecretKeyDontUseInProduction!</EXTERNAL_SIG_SECRET_KEY>
+                        <EXTERNAL_ENC_SECRET_KEY>JWTEncKeyDontUseInProduction666!</EXTERNAL_ENC_SECRET_KEY>
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.siom79.japicmp</groupId>
+                <artifactId>japicmp-maven-plugin</artifactId>
+                <configuration>
+                    <parameter>
+                        <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
+                    </parameter>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>websphere</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.cloud.tools</groupId>
+                        <artifactId>jib-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>websphere-image</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>${docker.jib.goal}</goal>
+                                </goals>
+                                <configuration>
+                                    <skip>${docker.websphere.skip}</skip>
+                                    <from>
+                                        <image>websphere-liberty:19.0.0.12-full-java8-ibmjava</image>
+                                    </from>
+                                    <to>
+                                        <image>${docker.image.name}:${docker.default.tag}-websphere-19.0.0.12</image>
+                                    </to>
+                                    <container>
+                                        <appRoot>/opt/ibm/wlp/usr/servers/defaultServer/apps/root.war/</appRoot>
+                                        <entrypoint>
+                                            <![CDATA[sh,-c, printenv > /config/server.env && echo '<?xml version="1.0" encoding="UTF-8"?><server description="defaultServer">\n<featureManager><feature>javaee-8.0</feature></featureManager><httpEndpoint host="*" httpPort="8080" httpsPort="8443" id="defaultHttpEndpoint" /><webApplication contextRoot="/" location="root.war" /></server>' > /config/server.xml && /opt/ibm/wlp/bin/installUtility install defaultServer && /opt/ibm/helpers/runtime/docker-server.sh /opt/ibm/wlp/bin/server run defaultServer]]>
+                                        </entrypoint>
+                                        <user>root</user>
+                                    </container>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
